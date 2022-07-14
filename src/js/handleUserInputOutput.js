@@ -3,7 +3,6 @@ document.addEventListener('keyup', function (event) {
     intakeInput();
   }
 });
-
 intakeInput();
 
 function intakeInput() {
@@ -20,7 +19,12 @@ function outputToScreen(results) {
 
   var compiled = '';
   results.forEach(result => {
-    compiled += '<li><p> ' + result.author + ' > ' + result.text + ' </p></li>';
+    if (result.author == 'VAI') {
+      //VIA Stands for Visual AI and is used when rendering images
+      compiled += '<li><img class="img-fluid" src="' + result.text + '"> </img></li>';
+    } else {
+      compiled += '<li><p> ' + result.author + ' > ' + result.text + ' </p></li>';
+    }
   });
 
   output.innerHTML = compiled;
@@ -80,6 +84,9 @@ function executeFunction(input) {
     case 'cypher':
       value(input);
       break;
+    case 'picture':
+      picture(input);
+      break;
     default:
       outputToScreen(updateStorage('INVALID INPUT', 'AI'));
       break;
@@ -87,5 +94,18 @@ function executeFunction(input) {
 }
 
 function value(input) {
-  outputToScreen(updateStorage(input[1], 'AI'));
+  outputToScreen(updateStorage(input[1], 'VIA'));
+}
+
+function picture(input) {
+  switch (input[1]) {
+    case '1':
+      var picture_1 = 'https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1743&q=80';
+
+      outputToScreen(updateStorage(picture_1, 'VAI'));
+      break;
+    default:
+      var invalidPicture = 'There is no Picture of ' + input[1];
+      outputToScreen(updateStorage(invalidPicture, 'AI'));
+  }
 }
