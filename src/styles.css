@@ -1,6 +1,8 @@
 ul {
+    padding-left: 0;
     list-style-type: none;
     color: #41ff00;
+    margin-bottom: 0;
 }
 
 .container::-webkit-scrollbar {
@@ -14,6 +16,18 @@ input {
 
 p {
     color: #41ff00;
+    margin-bottom: 2px;
+    font-family: 'Courier New', monospace;
+}
+
+#userLabel {
+    padding-top: 0px;
+    padding-right: 10px;
+}
+
+label {
+    font-family: 'Courier New', monospace;
+    color: #41ff00;
 }
 
 #resultsContainer {
@@ -22,14 +36,14 @@ p {
 }
 
 #userInput {
+    font-family: 'Courier New', monospace;
     background-color: rgb(14, 14, 14);
     color: #41ff00;
     border: none;
     border-radius: 0;
-    width: 1000px;
-    margin: auto;
-    height: 50px;
-    padding-left: 30px;
+    width: 620px;
+    height: 24px;
+    padding-left: 0px;
 }
 
 #userInput:focus {

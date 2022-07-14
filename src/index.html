@@ -13,12 +13,15 @@
 
 <body class="container d-row-flex">
     <div class="container overflow-auto" id="resultsContainer" style="background-color: rgb(14, 14, 14)">
-        <p class="pl-4 pt-2">TCL V 0.0.1</p>
+        <p class="pl-0 pt-2">TCL v. 0.0.2</p>
+        <hr size="1" width="" color="#41ff00" />
         <ul id="results"></ul>
-
-        <input id="userInput" autofocus="autofocus" onfocus="this.select()" value="" placeholder=">" />
+        <div class="d-inline-flex align-text-bottom">
+            <label id="userLabel">USER ></label>
+            <input id="userInput" ata-lpignore="true" data-form-type="other" autofocus="autofocus" onfocus="this.select()" value="" />
+        </div>
     </div>
 </body>
-<script src="/src/js/scripts.js"></script>
+<script src="/src/js/handleUserInputOutput.js"></script>
 
 </html>
