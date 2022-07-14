@@ -1,0 +1,37 @@
+ul {
+    list-style-type: none;
+    color: #41ff00;
+}
+
+.container::-webkit-scrollbar {
+    display: none;
+    /* Safari and Chrome */
+}
+
+input {
+    border: none;
+}
+
+p {
+    color: #41ff00;
+}
+
+#resultsContainer {
+    width: 1000px;
+    height: 800px;
+}
+
+#userInput {
+    background-color: rgb(14, 14, 14);
+    color: #41ff00;
+    border: none;
+    border-radius: 0;
+    width: 1000px;
+    margin: auto;
+    height: 50px;
+    padding-left: 30px;
+}
+
+#userInput:focus {
+    outline: none;
+}
